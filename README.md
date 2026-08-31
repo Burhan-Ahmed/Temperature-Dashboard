@@ -1,4 +1,4 @@
-# 🌡️ Heat Impact 7a7493c8f9127a00881fea09675774ae
+# 🌡️ Heat Impact 
 ## Quantifying the Relationship Between Urban Temperature, Community Vulnerability, and Retail Activity Across U.S. Cities
 
 > **Data Analysis & Correlation Track**
