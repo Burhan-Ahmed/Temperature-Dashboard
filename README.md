@@ -392,46 +392,6 @@ to:
 
 > **"Why is this city at higher risk, and how could the risk evolve?"**
 
-
-## Dashboard Page 3 — Correlation Analysis
-
-Visualizations include:
-
-* Correlation matrix
-* Scatter plots
-* Trend lines
-* Pearson correlation
-* Spearman correlation
-* Regression results
-
-
----
-
-## Dashboard Page 4 — Heat & Business
-
-This page focuses on the relationship between temperature and business activity.
-
-Potential analyses include:
-
-* Temperature vs retail activity
-* Temperature vs sales
-* Temperature vs foot traffic
-* Temperature vs business indicators
-
----
-
-## Dashboard Page 5 — Heat Equity
-
-This page investigates whether hotter environments are associated with socioeconomic vulnerability.
-
-Potential dimensions:
-
-* Income
-* Poverty
-* Population density
-* Housing
-* Vulnerability indicators
-
 ---
 
 # 🧰 Technologies
@@ -467,46 +427,7 @@ Potential dimensions:
 
 * Git
 * GitHub
-* Jupyter Notebook
 * `.env` environment configuration
-
----
-
-
-# 🔄 ETL Pipeline
-
-The project follows a reproducible ETL workflow.
-
-### Extract
-
-Collect:
-
-* FortyGuard temperature data
-* City coordinates
-* Demographic data
-* Socioeconomic data
-* Business/retail data
-
-### Transform
-
-Perform:
-
-* Data cleaning
-* Missing-value handling
-* Type conversion
-* Coordinate validation
-* Date standardization
-* Dataset joining
-* Outlier analysis
-* Feature engineering
-
-### Load
-
-Store the final analytical dataset for:
-
-* Statistical analysis
-* Power BI
-* Reporting
 
 ---
 
