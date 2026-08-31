@@ -76,20 +76,6 @@ Completed Heat Intelligence activities provide endpoint-specific intelligence re
 
 The project retrieves the report, extracts relevant analytical information, and incorporates it into the broader analytics workflow where applicable.
 
-
-# 📈 Analytical Methodology
-
-## 1. Exploratory Data Analysis
-
-The first stage examines:
-
-* Temperature distributions
-* Geographic patterns
-* Outliers
-* Missing values
-* Temporal variation
-* City-level differences
-
 ---
 # 📊 Dashboard
 
@@ -100,7 +86,7 @@ The final analytical results will be presented through an interactive dashboard 
 
 ---
 
-## Dashboard Page 1 — 🇺🇸 U.S. Heat Risk Overview
+## Dashboard 1 — 🇺🇸 U.S. Heat Risk Overview
 
 ### Purpose
 
@@ -119,94 +105,10 @@ Provide an immediate overview of **heat risk across U.S. cities** and identify l
 
 > **Design principle:** Avoid overcrowding the dashboard with KPIs. These six provide a concise summary of the overall heat-risk situation.
 
-### 🗺️ Main Visual — U.S. Heat Risk Map
-
-An interactive U.S. map showing heat risk by city.
-
-**Mapping:**
-
-* **Location:** `city`
-* **Latitude:** `latitude`
-* **Longitude:** `longitude`
-* **Size:** `population`
-* **Color:** `heat_risk_score`
-
-This allows users to quickly understand:
-
-> **Where is the heat, and how many people are potentially exposed?**
-
 ### 🏆 City Heat-Risk Ranking
 
 | Rank | City      | Temp | Heat Index |   UHI | Anomaly | 2050 Warming |
 | ---: | --------- | ---: | ---------: | ----: | ------: | -----------: |
-|    1 | Phoenix   | 44°C |       47°C | 5.8°C |  +5.2°C |       +3.1°C |
-|    2 | Las Vegas |  ... |        ... |   ... |     ... |          ... |
-|    3 | ...       |  ... |        ... |   ... |     ... |          ... |
-
-This provides an immediately understandable comparison of high-risk cities.
-
-### 📊 Visual 2 — Top 10 Hottest Cities
-
-A horizontal bar chart ranking the hottest cities.
-
-**Measure:**
-
-```text
-temperature_celsius
-```
-
-**Sort:** Descending
-
-Example:
-
-```text
-Phoenix       ████████████████████ 44°C
-Las Vegas     ██████████████████   42°C
-...
-```
-
-### 🔥 Visual 3 — Heat Stress Ranking
-
-Top 10 cities ranked by:
-
-```text
-heat_index
-```
-
-This helps distinguish:
-
-> **Temperature ≠ Human Heat Stress**
-
-A city with a slightly lower temperature can still have greater human heat stress because of humidity and other environmental conditions.
-
-### 📈 Visual 4 — Temperature Anomaly
-
-Rank cities by:
-
-```text
-temperature_deviation_from_normal
-```
-
-Focus on cities with the **largest positive deviations** from their historical normal.
-
-This is analytically stronger than ranking cities only by absolute temperature because it identifies locations experiencing unusually high temperatures.
-
-### 📊 Visual 5 — Temperature Distribution
-
-Histogram showing the distribution of city temperatures.
-
-```text
-Number of Cities
-      │
-      │        ███
-      │      ███████
-      │    ███████████
-      │  ███████████████
-      └────────────────────
-               °C
-```
-
-**Question answered:**
 
 > Is extreme heat concentrated in a few cities, or is it widespread?
 
@@ -214,11 +116,8 @@ Number of Cities
 
 Place the primary filters at the top of the dashboard:
 
-* `State`
 * `City`
 * `Date`
-* `Climate Type`
-* `Heat Stress Level`
 
 ---
 
@@ -235,22 +134,14 @@ This page is not another U.S. overview. Instead, it allows users to investigate 
 Users can filter by:
 
 * `City`
-* `State`
 * `Date`
 
-For example:
-
-```text
-City  → Phoenix
-State → Arizona
-Date  → 2024-08-15
-```
 
 Once selected, the entire dashboard updates for that city and date.
 
 ---
 
-## 🌡️ Section 1 — Temperature
+## 🌡️ Section — Temperature
 
 ### KPI Cards
 
@@ -271,94 +162,6 @@ Show the relationship between:
 * Minimum Temperature
 * Maximum Temperature
 * Record Temperature
-
----
-
-## 🧍 Section 2 — Human Heat Stress
-
-Human heat stress should be one of the **most visually prominent sections** of the dashboard.
-
-### KPI Cards
-
-| KPI                  | Variable            |
-| -------------------- | ------------------- |
-| 🔥 Heat Index        | `heat_index`        |
-| 🌡️ WBGT             | `wbgt`              |
-| 🌡️ UTCI             | `utci`              |
-| ⚠️ Heat Stress Level | `heat_stress_level` |
-
-These indicators provide different perspectives on how environmental conditions translate into **human thermal stress**.
-
-### 🌡️ Heat Stress Gauge
-
-Display the current heat-stress category using a gauge:
-
-```text
-Low ───── Moderate ───── High ───── Extreme
-                         ▲
-                    Phoenix
-```
-
-The gauge should dynamically update based on the selected city and date.
-
----
-
-## 🏙️ Section 3 — Urban Heat Island
-
-Analyze how urbanization contributes to elevated temperatures.
-
-Key indicators:
-
-* `uhi_intensity`
-* `daytime_uhi`
-* `nighttime_uhi`
-* `urban_rural_difference`
-
-This section helps answer:
-
-> **How much additional heat is associated with the urban environment?**
-
----
-
-## 📈 Section 4 — Temperature Time Series
-
-Display temperature changes over time.
-
-```text
-Temperature
-     │
-     │       ╭──╮
-     │   ╭───╯  ╰──
-     │───╯
-     └────────────────
-             Date
-```
-
-Recommended measures:
-
-* Average Temperature
-* Maximum Temperature
-* Heat Index
-* Temperature Anomaly
-
-This allows users to identify:
-
-* Heat waves
-* Sudden temperature increases
-* Persistent warming
-* Unusual temperature periods
-
----
-
-## 🔮 Section 5 — Future Heat Risk
-
-Where available, include projected warming indicators such as:
-
-* `projected_2050_temperature`
-* `projected_2050_warming`
-* Future temperature anomaly
-
-This connects **current heat exposure** with potential **future climate risk**.
 
 ---
 
@@ -383,14 +186,6 @@ Explore Historical Trends
       ↓
 Understand Future Risk
 ```
-
-This structure allows the dashboard to move from:
-
-> **"Where is the heat risk?"**
-
-to:
-
-> **"Why is this city at higher risk, and how could the risk evolve?"**
 
 ---
 
