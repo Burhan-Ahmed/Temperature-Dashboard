@@ -3,9 +3,9 @@
 
 ## Dashboard
 
-[📄 View Dashboard PDF](U.S_Heat_Exposure_Overview.pdf)
+![Dashboard Preview](Images/U.S_Heat_Exposure_Overview.jpg)
 
-[📄 View Dashboard PDF](City_Profile.pdf)
+![Dashboard Preview](Images/City_profile.jpg)
 
 > **Data Analysis & Correlation Track**
 
