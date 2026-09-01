@@ -1,9 +1,11 @@
 # 🌡️ Heat Impact 
 ## Quantifying the Relationship Between Urban Temperature, Community Vulnerability, and Retail Activity Across U.S. Cities
 
-## Dashboard
+## Dashboard Page 1
 
 ![Dashboard Preview](Images/U.S_Heat_Exposure_Overview.jpg)
+
+## Dashboard Page 2
 
 ![Dashboard Preview](Images/City_Profile.jpg)
 
