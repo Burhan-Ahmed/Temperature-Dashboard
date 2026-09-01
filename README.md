@@ -1,6 +1,12 @@
 # 🌡️ Heat Impact 
 ## Quantifying the Relationship Between Urban Temperature, Community Vulnerability, and Retail Activity Across U.S. Cities
 
+## Dashboard
+
+[📄 View Dashboard PDF](U.S_Heat_Exposure_Overview.pdf)
+
+[📄 View Dashboard PDF](City_Profile.pdf)
+
 > **Data Analysis & Correlation Track**
 
 Heat Impact is a data analytics project that investigates how urban temperature relates to **people, communities, and business activity** across U.S. cities.
