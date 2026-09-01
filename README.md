@@ -5,7 +5,7 @@
 
 ![Dashboard Preview](Images/U.S_Heat_Exposure_Overview.jpg)
 
-![Dashboard Preview](Images/City_profile.jpg)
+![Dashboard Preview](Images/City_Profile.jpg)
 
 > **Data Analysis & Correlation Track**
 
